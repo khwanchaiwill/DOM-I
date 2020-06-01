@@ -40,3 +40,82 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Create selectors by using any of the DOM element's methods
+let navOne = document.getElementsByTagName("a")
+navOne[0].innerHTML = siteContent["nav"]["nav-item-1"]
+let navTwo = document.getElementsByTagName("a")
+navTwo[1].innerHTML = siteContent["nav"]["nav-item-2"]
+let navThree = document.getElementsByTagName("a")
+navThree[2].innerHTML = siteContent["nav"]["nav-item-3"]
+let navFour = document.getElementsByTagName("a")
+navFour[3].innerHTML = siteContent["nav"]["nav-item-4"]
+let navFive = document.getElementsByTagName("a")
+navFive[4].innerHTML = siteContent["nav"]["nav-item-5"]
+let navSix = document.getElementsByTagName("a")
+navSix[5].innerHTML = siteContent["nav"]["nav-item-6"]
+
+//Note that IDs have been used on all images. Use the IDs to update src path content
+let imgHeader = document.getElementById("cta-img");
+imgHeader.setAttribute('src',siteContent["cta"]["img-src"])
+
+let ctaH1 = document.getElementsByTagName('h1');
+ctaH1[0].innerHTML = siteContent["cta"]["h1"]
+
+let ctaButton = document.getElementsByTagName('button');
+ctaButton[0].innerHTML = siteContent["cta"]["button"]
+
+// main-content 
+let mainH4 = document.getElementsByTagName('h4');
+mainH4[0].innerHTML = siteContent['main-content']['features-h4']
+mainH4[1].innerHTML = siteContent['main-content']['about-h4']
+mainH4[2].innerHTML = siteContent['main-content']['services-h4']
+mainH4[3].innerHTML = siteContent['main-content']['product-h4']
+mainH4[4].innerHTML = siteContent['main-content']['vision-h4']
+mainH4[5].innerHTML = siteContent["contact"]["contact-h4"]
+
+let mianPtag = document.getElementsByTagName('p');
+mianPtag[0].innerHTML = siteContent["main-content"]["features-content"]
+mianPtag[1].innerHTML = siteContent["main-content"]["about-content"]
+mianPtag[2].innerHTML = siteContent["main-content"]["services-content"]
+mianPtag[3].innerHTML = siteContent["main-content"]["product-content"]
+mianPtag[4].innerHTML = siteContent["main-content"]["vision-content"]
+mianPtag[5].innerHTML = siteContent["contact"]["address"]
+mianPtag[6].innerHTML = siteContent["contact"]["phone"]
+mianPtag[7].innerHTML = siteContent["contact"]["email"]
+mianPtag[8].innerHTML = siteContent["footer"]["copyright"]
+
+let imgMiddle = document.getElementById('middle-img');
+imgMiddle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//## Task 2: Update the HTML with the JSON data
+
+/* [x] Remember, NO direct updating of the HTML source is allowed.
+* [ ] Using your selectors, update the content to match the example file.
+* [ ] Remember to update the src attributes on images*/
+
+
+
+
+
+//## Task 3: Add new content
+/** [ ] Change the color of the navigation text to be green.
+* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [ ] Check your work by looking at the [original html](original.html) in the browser*/
+
+let aTag = document.querySelectorAll("a")
+aTag.forEach(nav =>{
+  nav.style.color = "green"
+})
+
+
+
+
+
+
+
+
+
+
+
+
