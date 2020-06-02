@@ -90,16 +90,15 @@ imgMiddle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 //## Task 2: Update the HTML with the JSON data
 
-/* [x] Remember, NO direct updating of the HTML source is allowed.
+/* [ ] Remember, NO direct updating of the HTML source is allowed.
 * [ ] Using your selectors, update the content to match the example file.
 * [ ] Remember to update the src attributes on images*/
-
-
-
+const brText = document.querySelector(".cta-text h1");
+brText.innerHTML = siteContent['cta']['h1'].replace(/\s/g, "</br>");
 
 
 //## Task 3: Add new content
-/** [ ] Change the color of the navigation text to be green.
+/** [x] Change the color of the navigation text to be green.
 * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 * [ ] Check your work by looking at the [original html](original.html) in the browser*/
 
@@ -107,6 +106,25 @@ let aTag = document.querySelectorAll("a")
 aTag.forEach(nav =>{
   nav.style.color = "green"
 })
+const newNavigate = document.querySelector("nav")
+
+const home = document.createElement("a");
+home.textContent = "Home";
+home.href = "#";
+home.style.color = "green";
+
+const hiRing = document.createElement("a");
+hiRing.textContent = "Hiring";
+hiRing.hrdf = "#";
+hiRing.style.color = "green";
+
+newNavigate.prepend(home);
+newNavigate.appendChild(hiRing);
+
+
+
+
+
 
 
 
